@@ -13,7 +13,7 @@ def generate_launch_description():
 
     environ['QT_AUTO_SCREEN_SCALE_FACTOR'] = '0'
     rviz_config_file = PathJoinSubstitution([
-        FindPackageShare('cs66_description'),
+        FindPackageShare('elite_robot_description'),
         'rviz',
         'view_robot.rviz'
     ])
@@ -38,7 +38,7 @@ def generate_launch_description():
                 Command([
                     'xacro ',
                     PathJoinSubstitution([
-                        FindPackageShare('cs66_description'),
+                        FindPackageShare('elite_robot_description'),
                         'urdf',
                         'robot.urdf.xacro',
                     ]),

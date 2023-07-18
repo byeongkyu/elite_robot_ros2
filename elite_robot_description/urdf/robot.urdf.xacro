@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="cs66_robot">
+    <xacro:arg name="robot_model" default="cs66"/>
+
+    <xacro:include filename="$(find elite_robot_description)/urdf/$(arg robot_model)_macro.urdf.xacro"/>
+    <xacro:include filename="$(find elite_robot_description)/urdf/$(arg robot_model)_gazebo.urdf.xacro"/>
+
+    <link name="world" />
+
+    <xacro:insert_robot prefix="" model="cs66" parent="world">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:insert_robot>
+</robot>

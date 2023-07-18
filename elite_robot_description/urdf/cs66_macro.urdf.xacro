@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:macro name="insert_robot" params="prefix parent *origin">
+    <xacro:macro name="insert_robot" params="prefix model parent *origin">
         <link name="${prefix}base_link">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/base.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/visual/base.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/base.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/collison/base.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0"/>
+                <origin xyz="0 0 0" rpy="0 0 0.042"/>
+                <mass value="1.753476"/>
+                <inertia ixx="0.003313" ixy="0" ixz="0" iyy="0.003312" iyz="0" izz="0.004254"/>
             </inertial>
         </link>
 
@@ -31,19 +31,19 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link1.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/visual/link1.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link1.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/collison/link1.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0"/>
+                <origin xyz="0 -0.009 0.072" rpy="0 0 0"/>
+                <mass value="2.431303"/>
+                <inertia ixx="0.006723" ixy="0" ixz="0.000001" iyy="0.006327" iyz="0.000046" izz="0.005198"/>
             </inertial>
         </link>
 
@@ -59,19 +59,19 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link2.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/visual/link2.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link2.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/collison/link2.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0"/>
+                <origin xyz="0.199 0.073 0.000" rpy="0 0 0"/>
+                <mass value="10.308232"/>
+                <inertia ixx="0.027417" ixy="-0.000970" ixz="0.000007" iyy="0.233058" iyz="0" izz="0.240741"/>
             </inertial>
         </link>
 
@@ -87,19 +87,19 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link3.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/visual/link3.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link3.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/collison/link3.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0"/>
+                <origin xyz="0.194 -0.058 0.000" rpy="0 0 0"/>
+                <mass value="5.342591"/>
+                <inertia ixx="0.008507" ixy="0.005298" ixz="0.000001" iyy="0.092157" iyz="0" izz="0.094359"/>
             </inertial>
         </link>
 
@@ -115,19 +115,19 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link4.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/visual/link4.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link4.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/collison/link4.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0"/>
+                <origin xyz="0 0.064 0.006" rpy="0 0 0"/>
+                <mass value="1.119554"/>
+                <inertia ixx="0.002172" ixy="0" ixz="0" iyy="0.001469" iyz="-0.000062" izz="0.001640"/>
             </inertial>
         </link>
 
@@ -143,19 +143,19 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link5.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/visual/link5.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link5.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/collison/link5.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0"/>
+                <origin xyz="0 -0.006 0.042" rpy="0 0 0"/>
+                <mass value="0.801370"/>
+                <inertia ixx="0.001175" ixy="0" ixz="0" iyy="0.000723" iyz="0.000009" izz="0.001108"/>
             </inertial>
         </link>
 
@@ -171,19 +171,19 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link6.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/visual/link6.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://cs66_description/meshes/visual/link6.dae" scale="1 1 1"/>
+                    <mesh filename="package://elite_robot_description/meshes/${model}/collison/link6.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0"/>
+                <origin xyz="0 0.021 0.001" rpy="0 0 0"/>
+                <mass value="0.243472"/>
+                <inertia ixx="0.000124" ixy="0" ixz="0" iyy="0.000173" iyz="0" izz="0.000119"/>
             </inertial>
         </link>
 
