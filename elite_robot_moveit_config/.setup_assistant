@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: elite_robot_description
+    relative_path: urdf/robot.urdf.xacro
+  srdf:
+    relative_path: config/cs66_robot.srdf
+  package_settings:
+    author_name: byeongkyu
+    author_email: byeongkyu@gmail.com
+    generated_timestamp: 1692750912
