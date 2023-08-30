@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:macro name="insert_robot" params="prefix model parent *origin">
+    <xacro:macro name="insert_robot" params="prefix model parent *origin robot_ip dashboard_port controller_port rtsi_port">
         <link name="${prefix}base_link">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -208,5 +208,13 @@
             <child link="${prefix}tool"/>
             <origin xyz="0 0.043 0" rpy="${-pi/2} 0 0"/>
         </joint>
+
+        <xacro:insert_ros2_control
+            prefix="${prefix}"
+            robot_ip="${robot_ip}"
+            dashboard_port="${dashboard_port}"
+            controller_port="${controller_port}"
+            rtsi_port="${rtsi_port}"
+        />
     </xacro:macro>
 </robot>

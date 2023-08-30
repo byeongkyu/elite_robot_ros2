@@ -1,0 +1,9 @@
+<library path="elite_robot_hardware_interface">
+    <class name="elite_robot_hardware/EliteRobotSystemHardware"
+            type="elite_robot_hardware::EliteRobotSystemHardware"
+            base_class_type="hardware_interface::SystemInterface">
+        <description>
+            The hardware_interface for Elite Robot Manipulator on ros2_control.
+        </description>
+    </class>
+</library>

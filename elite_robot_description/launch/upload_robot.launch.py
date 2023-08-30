@@ -11,7 +11,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     ld = LaunchDescription()
 
-    use_sim_time = DeclareLaunchArgument('use_sim_time', default_value="true")
+    use_sim_time = DeclareLaunchArgument('use_sim_time', default_value="false")
 
     rsp_node = Node(
         package='robot_state_publisher',

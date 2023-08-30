@@ -4,10 +4,24 @@
 
     <xacro:include filename="$(find elite_robot_description)/urdf/$(arg robot_model)_macro.urdf.xacro"/>
     <xacro:include filename="$(find elite_robot_description)/urdf/$(arg robot_model)_gazebo.urdf.xacro"/>
+    <xacro:include filename="$(find elite_robot_description)/urdf/$(arg robot_model)_ros2_control.urdf.xacro"/>
 
     <link name="world" />
 
-    <xacro:insert_robot prefix="" model="cs66" parent="world">
+    <xacro:arg name="robot_ip" default="127.0.0.1"/>
+    <xacro:arg name="dashboard_port" default="29999"/>
+    <xacro:arg name="controller_port" default="30001"/>
+    <xacro:arg name="rtsi_port" default="30004"/>
+
+    <xacro:insert_robot
+        prefix=""
+        model="cs66"
+        parent="world"
+        robot_ip="$(arg robot_ip)"
+        dashboard_port="$(arg dashboard_port)"
+        controller_port="$(arg controller_port)"
+        rtsi_port="$(arg rtsi_port)"
+    >
         <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:insert_robot>
 </robot>
